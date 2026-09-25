@@ -1,0 +1,70 @@
+GASTRONOVA RMS — 10-MINUTE VIVA CHEAT SHEET
+
+SYSTEM:
+Restaurant Management System for menu and order management.
+
+TABLES:
+users(id, name, email, password, role)
+menu_items(id, name, category, price, stock, status)
+orders(id, customer_name, menu_item_id, quantity, unit_price, subtotal, discount_rate, discount_amount, total, order_status)
+
+RELATIONSHIP:
+One menu item can appear in many orders. orders.menu_item_id is a foreign key to menu_items.id.
+
+BUSINESS RULE:
+Subtotal > 5000 => 10% discount.
+Subtotal > 10000 => 15% discount.
+The rule is implemented in PHP and previewed in JavaScript.
+
+CRUD:
+CREATE = INSERT
+READ = SELECT
+UPDATE = UPDATE
+DELETE = DELETE
+
+SEARCH/SORT:
+AJAX GET sends q and sort to PHP. PHP uses a controlled whitelist for sort fields.
+
+AJAX:
+JavaScript/jQuery sends requests to api/menu.php and api/orders.php without reloading the page.
+
+VALIDATION:
+Client-side validation improves UX. Server-side PHP validation is mandatory because client-side checks can be bypassed.
+
+SESSION:
+After successful login, PHP stores a small user object in $_SESSION. Protected pages call require_login().
+
+PASSWORD:
+password_hash/password_verify are used so plain passwords are not stored.
+
+TRANSACTION:
+Order creation uses a database transaction because inserting the order and reducing stock should succeed together or roll back together.
+
+JQUERY:
+Used for event handlers, AJAX, fadeIn/fadeOut, and dynamic DOM updates.
+
+A+ DEMO ORDER:
+Create an order with subtotal around Rs. 5,500 to show 10% discount.
+Create an order above Rs. 10,000 to show 15% discount.
+Search a customer.
+Change status Pending -> Preparing -> Completed.
+Edit a menu item.
+Delete an unused menu item.
+Export CSV.
+Toggle dark mode.
+
+POSSIBLE VIVA QUESTIONS:
+Q: Why prepared statements?
+A: To safely pass user values to SQL and reduce SQL injection risk.
+
+Q: Why foreign key?
+A: It maintains referential integrity between orders and menu_items.
+
+Q: Why transaction?
+A: Order insertion and stock reduction are one logical operation.
+
+Q: Why both JS and PHP validation?
+A: JS gives immediate feedback; PHP protects the server/database.
+
+Q: Why store unit_price in orders?
+A: It preserves the price charged at the time of the order even if menu price changes later.
