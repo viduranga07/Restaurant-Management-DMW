@@ -20,18 +20,249 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GastroNova Login</title><link rel="stylesheet" href="assets/css/style.css"></head>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>GastroNova | Restaurant Management</title>
+
+    <link 
+        rel="stylesheet" 
+        href="assets/css/style.css"
+    >
+
+</head>
+
+
 <body class="login-page">
-<div class="login-card">
-  <div class="brand large">GASTRONOVA <span>RMS</span></div>
-  <p class="muted">Restaurant Management System</p>
-  <?php if($error): ?><div class="alert danger"><?= e($error) ?></div><?php endif; ?>
-  <form method="post" id="loginForm">
-    <label>Email</label><input type="email" name="email" required placeholder="manager@gastronova.com">
-    <label>Password</label><input type="password" name="password" required placeholder="••••••••">
-    <button class="btn primary full">Sign In</button>
-  </form>
-  <p class="hint">Demo: manager@gastronova.com / password</p>
-</div>
-</body></html>
+
+    <main class="luxury-login">
+
+
+        <!-- LEFT SIDE: RESTAURANT IMAGE -->
+
+        <section class="login-visual">
+
+            <div class="visual-overlay"></div>
+
+            <div class="visual-content">
+
+                <div class="luxury-mark">
+                    ✦
+                </div>
+
+                <p class="eyebrow">
+                    FINE DINING · SMART MANAGEMENT
+                </p>
+
+                <h1>
+                    Where every<br>
+                    detail matters.
+                </h1>
+
+                <div class="gold-line"></div>
+
+                <p class="visual-description">
+                    A refined management experience
+                    designed for modern hospitality.
+                </p>
+
+                <div class="visual-footer">
+                    <span>GASTRONOVA</span>
+                    <span>EST. 2026</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE: LOGIN -->
+
+        <section class="login-panel">
+
+            <div class="login-content">
+
+
+                <!-- BRAND -->
+
+                <div class="login-brand">
+
+                    <div class="brand-symbol">
+                        ✦
+                    </div>
+
+                    <div>
+                        <div class="brand-name">
+                            GASTRONOVA
+                        </div>
+
+                        <div class="brand-subtitle">
+                            RESTAURANT MANAGEMENT SYSTEM
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- WELCOME -->
+
+                <div class="login-heading">
+
+                    <p class="eyebrow dark">
+                        STAFF PORTAL
+                    </p>
+
+                    <h2>
+                        Welcome back.
+                    </h2>
+
+                    <p>
+                        Sign in to manage today's
+                        restaurant operations.
+                    </p>
+
+                </div>
+
+
+                <!-- ERROR MESSAGE -->
+
+                <?php if($error): ?>
+
+                    <div class="login-error">
+
+                        <span>!</span>
+
+                        <?= e($error) ?>
+
+                    </div>
+
+                <?php endif; ?>
+
+
+                <!-- LOGIN FORM -->
+
+                <form 
+                    method="post" 
+                    id="loginForm"
+                    class="luxury-form"
+                >
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            EMAIL ADDRESS
+                        </label>
+
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="manager@gastronova.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <div class="password-label">
+
+                            <label for="password">
+                                PASSWORD
+                            </label>
+
+                            <span>
+                                SECURE ACCESS
+                            </span>
+
+                        </div>
+
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button 
+                        type="submit"
+                        class="luxury-button"
+                    >
+
+                        <span>
+                            SIGN IN TO DASHBOARD
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- DEMO INFORMATION -->
+
+                <div class="demo-info">
+
+                    <span class="demo-dot"></span>
+
+                    <div>
+
+                        <strong>Demo access</strong>
+
+                        <p>
+                            manager@gastronova.com
+                            ·
+                            password
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOOTER -->
+
+                <footer class="login-footer">
+
+                    <span>
+                        © 2026 GastroNova
+                    </span>
+
+                    <span>
+                        Restaurant Operations Platform
+                    </span>
+
+                </footer>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>
