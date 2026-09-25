@@ -1,7 +1,7 @@
 # GastroNova Restaurant Management System — NIBM DSE 25.3
 
 ## Technology
-HTML, CSS, JavaScript, jQuery, PHP, MySQL. No Bootstrap/Tailwind/WordPress.
+HTML, CSS, JavaScript, jQuery, PHP, MySQL.
 
 ## Setup in XAMPP
 1. Copy this `restaurant_management_system` folder into `C:\xampp\htdocs\`.
@@ -28,11 +28,9 @@ HTML, CSS, JavaScript, jQuery, PHP, MySQL. No Bootstrap/Tailwind/WordPress.
 - Dark mode
 - Password hashing/verification
 
-## Important viva point
-The SQL contains a bcrypt password hash. Explain that passwords are never stored as plain text. PHP `password_verify()` checks the entered password against the stored hash.
 
 ## Three-member division
-Member 1: Database + PHP/API + business logic.
-Member 2: Frontend HTML/CSS + responsive UI + dashboard.
-Member 3: JavaScript/jQuery + AJAX + testing + CSV/dark mode.
-All members should understand the complete flow before viva.
+Member 1: Database + PHP/API + JavaScript/jQuery + AJAX + testing + CSV/dark mode.business logic.
+Member 2: Frontend HTML and Database + responsive UI + dashboard.
+Member 3:css
+
