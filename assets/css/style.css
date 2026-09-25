@@ -1,1 +1,907 @@
-*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#f4f6f8;color:#18212b}a{text-decoration:none;color:inherit}.topbar{height:68px;background:#101318;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 28px}.brand{font-weight:800;letter-spacing:1.5px}.brand span{color:#d4af37}.brand.large{font-size:28px;text-align:center;margin-bottom:6px}.top-actions{display:flex;gap:16px;align-items:center;font-size:14px}.icon-btn{border:1px solid #444;background:#1d2229;color:#fff;border-radius:8px;padding:8px 11px;cursor:pointer}.logout{color:#f4c76a}.layout{display:flex;min-height:calc(100vh - 68px)}.sidebar{width:220px;background:#171b21;padding:22px 12px}.sidebar a{display:block;color:#dfe5eb;padding:13px 15px;border-radius:8px;margin-bottom:5px}.sidebar a:hover{background:#252c35;color:#fff}.content{flex:1;padding:28px;max-width:1400px;margin:auto;width:100%}h1{margin:0 0 5px;font-size:30px}h2{font-size:19px;margin-top:0}.muted{color:#6d7782}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}.stat,.panel{background:#fff;border:1px solid #e0e5ea;border-radius:12px;padding:20px}.stat span{color:#6d7782;font-size:13px}.stat strong{display:block;font-size:27px;margin-top:8px}.grid-2{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}.rule{background:#f7f0d8;border-left:4px solid #d4af37;padding:16px;border-radius:7px;margin-bottom:18px;line-height:1.7}.clean{padding-left:20px;line-height:1.9}.page-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.toolbar{display:flex;gap:10px;margin-bottom:14px}.toolbar input,.toolbar select{flex:1;max-width:360px}.toolbar select{flex:0 0 180px}.btn,.small,input,select{font:inherit}.btn{border:0;border-radius:8px;padding:11px 17px;cursor:pointer}.primary{background:#c49a2c;color:#111;font-weight:700}.full{width:100%}input,select{width:100%;padding:11px;border:1px solid #cfd6dd;border-radius:7px;background:#fff;margin:6px 0 14px}label{font-size:13px;font-weight:700}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:12px;border-bottom:1px solid #e7eaee;white-space:nowrap}th{font-size:12px;text-transform:uppercase;color:#66727e;background:#fafbfc}.badge{background:#eef1f4;padding:4px 8px;border-radius:99px;font-size:12px}.small{padding:7px 10px;border:1px solid #cbd2d9;background:#fff;border-radius:6px;cursor:pointer}.dangerBtn{color:#a12d2d;border-color:#e2b9b9}.alert{padding:11px 14px;border-radius:8px;margin:10px 0}.success{background:#e6f5ea;color:#206536}.danger{background:#fde8e8;color:#922b2b}.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);align-items:center;justify-content:center;padding:20px;z-index:5}.modal.show{display:flex}.modal-card{background:#fff;border-radius:12px;padding:24px;max-width:460px;width:100%;position:relative;max-height:90vh;overflow:auto}.close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:27px;cursor:pointer}.preview{background:#f5f7f8;border-radius:8px;padding:13px;margin-bottom:14px}.login-page{min-height:100vh;display:grid;place-items:center;background:linear-gradient(135deg,#0e1115,#242a31)}.login-card{width:min(420px,92%);background:#fff;border-radius:15px;padding:32px;box-shadow:0 15px 50px rgba(0,0,0,.3)}.hint{font-size:12px;color:#777;text-align:center;margin-top:18px}.dark{background:#101318;color:#e9edf1}.dark .panel,.dark .stat,.dark .modal-card,.dark .login-card{background:#1a1f26;border-color:#303740}.dark input,.dark select,.dark .small{background:#222831;color:#e9edf1;border-color:#3b444f}.dark th{background:#20262e;color:#aeb8c2}.dark td{border-color:#303740}.dark .muted{color:#9aa6b2}.dark .preview{background:#252c34}@media(max-width:900px){.sidebar{width:170px}.stats{grid-template-columns:repeat(2,1fr)}.grid-2{grid-template-columns:1fr}}@media(max-width:650px){.topbar{padding:0 14px}.top-actions span{display:none}.layout{display:block}.sidebar{width:100%;display:flex;overflow:auto;padding:8px}.sidebar a{white-space:nowrap;margin:0}.content{padding:18px}.stats{grid-template-columns:1fr 1fr}.page-head{align-items:flex-start;gap:10px}.toolbar{flex-direction:column}.toolbar input,.toolbar select{max-width:none}.grid-2{grid-template-columns:1fr}}
+/* =========================================================
+   GASTRONOVA PREMIUM LUXURY LOGIN
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+body.login-page {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    background: #050505;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.login-page .luxury-login {
+    width: 100%;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   FULL RESTAURANT BACKGROUND
+   ========================================================= */
+
+.login-page .login-background {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background-image:
+        url("../images/gastronova-background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* =========================================================
+   BACKGROUND OVERLAY
+   ========================================================= */
+
+.login-page .background-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.10) 40%,
+            rgba(0, 0, 0, 0.35) 70%,
+            rgba(0, 0, 0, 0.65) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LEFT RESTAURANT CONTENT
+   ========================================================= */
+
+.login-page .restaurant-message {
+
+    position: absolute;
+
+    left: 5%;
+
+    bottom: 8%;
+
+    z-index: 3;
+
+    width: 44%;
+
+    color: #ffffff;
+}
+
+
+/* GOLD SYMBOL */
+
+.login-page .gold-symbol {
+
+    margin-bottom: 22px;
+
+    color: #f4c542;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 18px
+        rgba(244, 197, 66, 0.55);
+}
+
+
+/* EYEBROW */
+
+.login-page .restaurant-eyebrow {
+
+    margin: 0 0 22px;
+
+    color: #f4c542;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* MAIN LEFT HEADING */
+
+.login-page .restaurant-message h1 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(
+        48px,
+        5vw,
+        76px
+    );
+
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        0 5px 25px
+        rgba(0, 0, 0, 0.85);
+}
+
+
+/* GOLD LINE */
+
+.login-page .gold-line {
+
+    width: 70px;
+
+    height: 2px;
+
+    margin: 30px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f4c542,
+            #c58a1c
+        );
+}
+
+
+/* DESCRIPTION */
+
+.login-page .restaurant-description {
+
+    max-width: 430px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.84);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    text-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.8);
+}
+
+
+/* LEFT FOOTER */
+
+.login-page .restaurant-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    max-width: 500px;
+
+    margin-top: 55px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(244, 197, 66, 0.40);
+
+    color: #f4c542;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   RIGHT LOGIN AREA
+   ========================================================= */
+
+.login-page .login-area {
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    z-index: 5;
+
+    width: 45%;
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px 6%;
+}
+
+
+/* =========================================================
+   LOGIN BOX
+   ========================================================= */
+
+.login-page .login-box {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.login-page .login-logo {
+
+    width: 125px;
+
+    height: 125px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.login-page .login-logo img {
+
+    display: block;
+
+    width: 125px;
+
+    height: 125px;
+
+    object-fit: contain;
+
+    /*
+       Your logo has a black background.
+       Screen blending helps the black
+       blend with the dark page.
+    */
+
+    mix-blend-mode: screen;
+
+    filter:
+        drop-shadow(
+            0 5px 20px
+            rgba(244, 197, 66, 0.30)
+        );
+}
+
+
+/* =========================================================
+   STAFF PORTAL
+   ========================================================= */
+
+.login-page .portal-label {
+
+    display: inline-block;
+
+    margin: 0 0 24px;
+
+    padding: 7px 13px;
+
+    border-left:
+        2px solid
+        #f4c542;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    color: #f4c542;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================================================
+   LOGIN HEADING
+   ========================================================= */
+
+.login-page .login-box h2 {
+
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 50px;
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    text-shadow:
+        0 4px 20px
+        rgba(0, 0, 0, 0.8);
+}
+
+
+/* INTRO */
+
+.login-page .login-intro {
+
+    margin: 0 0 38px;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LOGIN FORM
+   ========================================================= */
+
+.login-page .luxury-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+
+/* FORM GROUP */
+
+.login-page .form-group {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* LABEL */
+
+.login-page .form-group label {
+
+    margin-bottom: 9px;
+
+    color:
+        rgba(255, 255, 255, 0.90);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+
+/* PASSWORD LABEL */
+
+.login-page .password-label {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.login-page .password-label span {
+
+    color:
+        rgba(244, 197, 66, 0.70);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.login-page .luxury-form input {
+
+    width: 100%;
+
+    height: 54px;
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0 15px;
+
+    border:
+        1px solid
+        rgba(244, 197, 66, 0.30);
+
+    border-radius: 0;
+
+    outline: none;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    backdrop-filter: blur(6px);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* PLACEHOLDER */
+
+.login-page .luxury-form input::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.40);
+}
+
+
+/* INPUT FOCUS */
+
+.login-page .luxury-form input:focus {
+
+    border-color: #f4c542;
+
+    background:
+        rgba(0, 0, 0, 0.75);
+
+    box-shadow:
+        0 0 0 1px
+        rgba(244, 197, 66, 0.20);
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-page .luxury-button {
+
+    width: 100%;
+
+    height: 58px;
+
+    margin-top: 5px;
+
+    padding: 0 22px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        #f4c542;
+
+    border-radius: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4c542,
+            #c58a1c
+        );
+
+    color: #080808;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.login-page .luxury-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.08);
+
+    box-shadow:
+        0 10px 30px
+        rgba(244, 197, 66, 0.25);
+}
+
+
+/* ARROW */
+
+.login-page .button-arrow {
+
+    font-size: 22px;
+
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   DEMO ACCESS
+   ========================================================= */
+
+.login-page .demo-info {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    padding: 16px 18px;
+
+    border:
+        1px solid
+        rgba(244, 197, 66, 0.25);
+
+    background:
+        rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* DEMO DOT */
+
+.login-page .demo-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    margin-top: 5px;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+
+    background: #f4c542;
+
+    box-shadow:
+        0 0 10px
+        rgba(244, 197, 66, 0.70);
+}
+
+
+/* DEMO TITLE */
+
+.login-page .demo-info strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #f4c542;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* DEMO TEXT */
+
+.login-page .demo-info p {
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.58);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.login-page .login-error {
+
+    margin-bottom: 25px;
+
+    padding: 13px 15px;
+
+    border-left:
+        3px solid
+        #e25b5b;
+
+    background:
+        rgba(90, 0, 0, 0.55);
+
+    color: #ffdada;
+
+    font-size: 13px;
+}
+
+
+.login-page .login-error span {
+
+    margin-right: 8px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.login-page .login-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-top: 35px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(244, 197, 66, 0.20);
+
+    color:
+        rgba(255, 255, 255, 0.42);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .login-page .restaurant-message {
+
+        width: 44%;
+
+        left: 4%;
+    }
+
+
+    .login-page .login-area {
+
+        width: 49%;
+
+        padding: 40px 4%;
+    }
+
+
+    .login-page .login-box h2 {
+
+        font-size: 42px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .login-page .login-background {
+
+        min-height: 100vh;
+
+        background-position:
+            center center;
+    }
+
+
+    .login-page .background-overlay {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.20),
+                rgba(0, 0, 0, 0.94)
+            );
+    }
+
+
+    .login-page .restaurant-message {
+
+        position: relative;
+
+        left: auto;
+
+        bottom: auto;
+
+        width: 100%;
+
+        padding:
+            50px 30px 20px;
+
+        box-sizing: border-box;
+    }
+
+
+    .login-page .restaurant-message h1 {
+
+        font-size: 48px;
+    }
+
+
+    .login-page .login-area {
+
+        position: relative;
+
+        top: auto;
+
+        right: auto;
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding:
+            20px 30px 55px;
+
+        box-sizing: border-box;
+
+        align-items: stretch;
+    }
+
+
+    .login-page .login-box {
+
+        max-width: none;
+    }
+
+
+    .login-page .login-logo {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .login-page .login-footer {
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .login-page .restaurant-message {
+
+        padding:
+            35px 22px 15px;
+    }
+
+
+    .login-page .restaurant-message h1 {
+
+        font-size: 40px;
+    }
+
+
+    .login-page .login-area {
+
+        padding:
+            20px 22px 45px;
+    }
+
+
+    .login-page .login-logo,
+    .login-page .login-logo img {
+
+        width: 110px;
+
+        height: 110px;
+    }
+
+
+    .login-page .login-box h2 {
+
+        font-size: 38px;
+    }
+}
